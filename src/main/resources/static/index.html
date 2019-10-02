@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+</head>
+<body>
+   <form action="parser">
+   		输入地址：<input type="text" name="param"/>
+   		<input type="submit" value="提交"/>
+   </form>
+</body>
+<script type="text/javascript">
+
+		$.ajax({
+	 		  type:"GET", 
+	 		          url:"testAjax.do?submit="+$(":submit").val(),
+	 				 // data:"submit="+$(":submit").val(),
+	 		          dataType:"json", //预期服务器返回数据的类型
+	 		          success:function(data){
+	 		           	alert(data);
+	 		 		 },
+	 		          error:function(jqXHR){
+	 		             aler("发生错误："+ jqXHR.status);
+	 		          } });
+		alert("请求");
+</script>
+</html>
