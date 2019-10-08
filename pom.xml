@@ -8,13 +8,13 @@
   <name>reptile Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		 <!-- 文件拷贝时的编码 -->  
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>  
+        <project.build.sourceEncoding>GBK</project.build.sourceEncoding>  
+        <project.reporting.outputEncoding>GBK</project.reporting.outputEncoding>  
         <!-- 编译时的编码 -->  
-        <maven.compiler.encoding>UTF-8</maven.compiler.encoding> 
+        <maven.compiler.encoding>GBK</maven.compiler.encoding> 
 	</properties>
 	<!-- spring-boot-starter-parent包含了大量配置好的依赖管理，在自己项目添加这些依赖的时候不需要写<version>版本号 -->
 	<parent>
