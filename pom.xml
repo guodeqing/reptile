@@ -66,13 +66,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                
             </plugin>
  
  
             <!-- 1、设置jar的入口类 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
+                <artifactId>maven-war-plugin</artifactId>
                 <version>2.6</version>
                 <configuration>
                     <archive>
