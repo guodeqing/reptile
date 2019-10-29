@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-
+<script type="text/javascript" src="src/main/resources/static/js/thymol.min.js"></script>
 </head>
 <body>
    <form action="parser">
-   		输入地址：<input type="text" name="param"/>
-   		<input type="submit" value="提交"/>
+   		输入地址：<input   type="text" name="param"/>
+   		<input  type="submit" value="提交"/>
    </form>
 </body>
 <script type="text/javascript">
-
 		$.ajax({
 	 		  type:"GET", 
 	 		          url:"testAjax.do?submit="+$(":submit").val(),

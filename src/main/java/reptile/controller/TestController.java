@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import reptile.util.DownloadUtil;
@@ -33,6 +34,12 @@ import reptile.util.ExcelUtil;
 @RequestMapping
 public class TestController {
    public static String [] title = {"楼盘","销售状态","区域","户型","均价（元/平）"};
+//   @RequestMapping("/pwd.do")
+//   @ResponseBody
+//   public String testEndord(){
+//	   String password=new BCryptPasswordEncoder(4).encode("123");
+//	   return "加密："+password;
+//   }
    @RequestMapping(value="testAjax.do",method=RequestMethod.POST)
    public String testAjax(String submit){
 	   return submit;
