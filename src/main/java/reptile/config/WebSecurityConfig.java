@@ -36,8 +36,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 //                .antMatchers("/login").permitAll()
                 .antMatchers("/pwd").permitAll().anyRequest().authenticated().
                 and().formLogin().loginPage("/tologin")
-//                .defaultSuccessUrl("/login")
-                .successForwardUrl("/login")
+                .loginProcessingUrl("/tologin")//处理登陆接口
+                //.successForwardUrl(forwardUrl)
+                .defaultSuccessUrl("/login",true)
+//                .successForwardUrl("/tologin")
                 .permitAll().
 //                .successHandler(loginSuccessHandler()).
                 and().logout().logoutUrl("/loginout").permitAll().invalidateHttpSession(true).

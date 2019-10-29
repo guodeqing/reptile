@@ -9,7 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import entity.User;
@@ -29,7 +32,7 @@ public class UserController {
 //		mv.setViewName("/template/login.html");
 		return "login" ;
 	}
-	@GetMapping("/login")
+	@RequestMapping(value="/login")
 	public String  longin(HttpServletRequest request,HttpServletResponse response){
 		List<User> users= new  ArrayList<>();
 		User user = new User();
